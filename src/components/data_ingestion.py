@@ -1,7 +1,7 @@
 import os
 import sys
-from src.exception import CustomException
 from src.logger import logging
+from src.exception import CustomException
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -24,7 +24,7 @@ class DataIngestion:
         logging.info('entering the data ingestion method or computing')
 
         try:
-            df = pd.read_csv("F:\\Data Science\\ML Project_with_github\\notebook\\data\\StudentsPerformance.csv")
+            df = pd.read_csv("notebook\data\StudentsPerformance.csv")
             logging.info('Read the data from file in to dataframe')
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
 
@@ -49,6 +49,4 @@ class DataIngestion:
             logging.info("ingestion of data is not successful : " + str(e))
             raise CustomException(e, sys)
 
-if __name__=="__main__":
-    obj = DataIngestion()
-    obj.initiate_data_ingestion()
+

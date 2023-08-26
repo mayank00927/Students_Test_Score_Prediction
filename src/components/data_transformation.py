@@ -1,5 +1,6 @@
 
 import sys
+import os
 
 import pandas as pd
 import numpy as np
@@ -31,17 +32,17 @@ class DataTransformation:
         ''' This function is resonsible for data transformation '''
 
         try:
-            numerical_columns = ["writing_score","reading_score"]
+            numerical_columns = ["writing score","reading score"]
             categorical_columns= ["gender",
-                                  "race_ethnicity",
-                                  "parental_level_of_education",
+                                  "race/ethnicity",
+                                  "parental level of education",
                                   "lunch",
-                                  "test_preparation_course"]
+                                  "test preparation course"]
 
             num_pipeline =Pipeline(
                 steps=[
                     ("imputer",SimpleImputer(strategy='median')),
-                    ("scaler",StandardScaler())
+                    ("scaler",StandardScaler(with_mean=False))
             ]
 
             )
@@ -50,7 +51,7 @@ class DataTransformation:
                 steps =[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
                     ("one_hot_encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler())
+                    ("scaler",StandardScaler(with_mean=False))
 
 
                 ]
@@ -88,9 +89,9 @@ class DataTransformation:
 
             preprocessing_obj = self.get_data_transformer_obj()
 
-            target_column_name = "math_score"
+            target_column_name = "math score"
 
-            numerical_columns = ["writing_score", "reading_score"]
+            numerical_columns = ["writing score", "reading score"]
 
             input_feature_train_df = train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df = train_df[target_column_name]
@@ -126,7 +127,7 @@ class DataTransformation:
 
 
         except Exception as e:
-
+            logging.info("transformation of data is not successful : " + str(e))
             raise CustomException(e,sys)
 
 
