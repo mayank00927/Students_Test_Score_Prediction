@@ -7,17 +7,17 @@ There are 7 independent variables :
 
 **Dataset information**
 
-gender : sex of students -> (Male/female)
-race/ethnicity : ethnicity of students -> (Group A, B,C, D,E)
-parental level of education : parents' final education ->(bachelor's degree,some college,master's degree,associate's degree,high school)
-lunch : having lunch before (standard or free/reduced)
-preparation course : complete or not complete before test
-reading score
-writing score
+* gender : sex of students -> (Male/female)
+* race/ethnicity : ethnicity of students -> (Group A, B,C, D,E)
+* parental level of education : parents' final education ->(bachelor's degree,some college,master's degree,associate's degree,high school)
+* lunch : having lunch before (standard or free/reduced)
+* preparation course : complete or not complete before test
+* reading score
+* writing score
 
 **Target variable:**
 
-math score : score in math test.
+* math score : score in math test.
 
 Dataset Source is csv file which is given in github notbook/data.
 
