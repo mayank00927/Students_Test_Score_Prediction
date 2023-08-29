@@ -1,10 +1,11 @@
-**Students Test Score Prediction - Mayank Sharma**
-Introduction About the Data :
+# Students Test Score Prediction - Mayank Sharma
+
+## Introduction About the Data :
 The goal is to predict test score of Students (Regression Analysis).
 
 There are 7 independent variables :
 
-Dataset information
+**Dataset information**
 
 gender : sex of students -> (Male/female)
 race/ethnicity : ethnicity of students -> (Group A, B,C, D,E)
@@ -14,33 +15,33 @@ preparation course : complete or not complete before test
 reading score
 writing score
 
-Target variable:
+**Target variable:**
 
 math score : score in math test.
 
 Dataset Source is csv file which is given in github notbook/data.
 
-Approach for the project
+## Approach for the project
 
-Data Ingestion :
+**Data Ingestion :**
 In Data Ingestion phase the data is first read as csv.
 Then the data is split into training and testing and saved as csv file.
 
-Data Transformation :
+**Data Transformation :**
 In this phase a ColumnTransformer Pipeline is created.
 for Numeric Variables first SimpleImputer is applied with strategy median , then Standard Scaling is performed on numeric data.
 for Categorical Variables SimpleImputer is applied with most frequent strategy, then one hot encoding performed , after this data is scaled with Standard Scaler.
 This preprocessor is saved as pickle file.
 
-Model Training :
+**Model Training :**
 In this phase base model is tested. 
 After this hyperparameter tuning is performed and best model found was Logistic Regression.
 This model is saved as pickle file.
 
-Prediction Pipeline :
+**Prediction Pipeline :**
 This pipeline converts given data into dataframe and has various functions to load pickle files and predict the final results in python.
 
-Flask App creation :
+**Flask App creation :**
 Flask app is created with User Interface to predict the Student math score inside a Web Application.
 
 **Deployment Using Docker :**
@@ -57,6 +58,6 @@ Flask app is created with User Interface to predict the Student math score insid
 11. Naming runner as self-hosted and adding security keys in secrets and variable tab.
 12. Deployment is ready, as we update anything in github code same thing will be pushed to AWS EC2 instance.
 
-**GITHUB Connected to EC2 Scrrenshot :**
+## Scrrenshot of Github and EC2 Connection :
 
 ![Screenshot (30)](https://github.com/mayank00927/Students_Test_Score_Prediction/assets/96683686/b9d4d934-24d0-4ce6-8725-ed044c71f600)
