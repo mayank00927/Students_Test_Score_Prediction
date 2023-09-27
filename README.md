@@ -35,7 +35,7 @@ This preprocessor is saved as pickle file.
 
 **Model Training :**
 In this phase base model is tested. 
-After this hyperparameter tuning is performed and best model found was Logistic Regression.
+After this hyperparameter tuning is performed and best model found was Linear Regression.
 This model is saved as pickle file.
 
 **Prediction Pipeline :**
