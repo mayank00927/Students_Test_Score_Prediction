@@ -58,6 +58,6 @@ Flask app is created with User Interface to predict the Student math score insid
 11. Naming runner as self-hosted and adding security keys in secrets and variable tab.
 12. Deployment is ready, as we update anything in github code same thing will be pushed to AWS EC2 instance.
 
-## Scrrenshot of Github and EC2 Connection :
+## Screenshot of Github and EC2 Connection :
 
 ![Screenshot (30)](https://github.com/mayank00927/Students_Test_Score_Prediction/assets/96683686/b9d4d934-24d0-4ce6-8725-ed044c71f600)
